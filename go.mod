@@ -253,6 +253,8 @@ replace (
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 
 	github.com/jhump/protoreflect => github.com/jhump/protoreflect v1.9.0
+
+	github.com/rollkit/rollkit => github.com/phinc275/rollkit v0.0.0-20230210093419-ff15f5b303eb
 	github.com/tendermint/tendermint => github.com/celestiaorg/tendermint v0.34.22-0.20221202214355-3605c597500d
 )
 

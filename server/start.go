@@ -14,9 +14,9 @@ import (
 	"github.com/tendermint/tendermint/node"
 	"github.com/tendermint/tendermint/p2p"
 	"github.com/tendermint/tendermint/privval"
+	"github.com/tendermint/tendermint/proxy"
 
 	"github.com/spf13/cobra"
-	abciclient "github.com/tendermint/tendermint/abci/client"
 	"github.com/tendermint/tendermint/abci/server"
 	tcmd "github.com/tendermint/tendermint/cmd/tendermint/commands"
 	tmos "github.com/tendermint/tendermint/libs/os"
@@ -348,7 +348,7 @@ func startInProcess(ctx *Context, clientCtx client.Context, appCreator types.App
 			nodeConfig,
 			p2pKey,
 			signingKey,
-			abciclient.NewLocalClient(nil, app),
+			proxy.NewLocalClientCreator(app),
 			genDoc,
 			ctx.Logger,
 		)
